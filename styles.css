@@ -1,0 +1,135 @@
+:root {
+    /* primary */
+    --bg-blue: hsl(233, 47%, 7%);
+    --card-blue: hsl(244, 28%, 16%);
+    --accent-violet: hsl(288, 64%, 61%);
+    /* neutral */
+    --main-white: hsl(0, 0%, 100%);
+    --para-white: hsla(0, 0%, 100%, 0.75);
+    --stat-white: hsla(0, 0%, 100%, 0.6);
+    font-size: 15px;
+}
+
+body, html {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    /* Inter 400 700, Lexend 400 */
+    background: var(--bg-blue);
+    height: 100%;
+    
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    max-width: 1000px;
+    max-height: 465px;
+}
+
+.text {
+    background: var(--card-blue);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 25px;
+    justify-content: center;
+    align-items: end;
+
+}
+
+.text p {
+    max-width: 316px;
+}
+
+.highlight {
+    color: var(--accent-violet);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.hero img {
+    min-width: auto;
+    min-height: 100%;
+}
+
+#title {
+    color: var(--main-white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--stat-white);
+    margin-bottom: 1rem;
+}
+
+.number {
+    color: var(--para-white);
+    font-size: 2rem;
+}
+
+.stat-title {
+    color: var(--stat-white);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.stats {
+    display: flex;
+    gap: 3rem;
+    align-content: end;
+}
+
+.stats p {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+
+    .card {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+
+    .hero {
+        grid-row: 1;
+        max-height: 250px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .hero img {
+        position: relative;
+        top: 50px;
+    }
+
+    .text {
+        grid-row: 2;
+        justify-content: center;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 5px;;
+    }
+
+    .container {
+        align-items: start;
+    }
+
+
+}
